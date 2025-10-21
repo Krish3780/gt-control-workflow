@@ -1,11 +1,12 @@
 name: Matrix demo
 on: push
+
 jobs:
   build:
     strategy: 
       matrix:
-        node-version: [ 12, 14, 16 ]
-        operating-system: [ ubuntu-latest, windows-latest ]
+        node-version: [12, 14, 16]
+        operating-system: [ubuntu-latest, windows-latest]
   runs-on: ${{ matrix.node-version }}      
   steps:
     - name: get code
