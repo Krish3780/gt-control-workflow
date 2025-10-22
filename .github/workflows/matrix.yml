@@ -3,6 +3,7 @@ on: push
 
 jobs:
   build:
+    continue-on-error:
     strategy:
       matrix:
         node-version: [10, 12, 14]
@@ -14,7 +15,7 @@ jobs:
     - name: install node JS
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}  
+        node-version: ${{ matrix.node-version }}
     - name: install dependencies
       run: npm ci
     - name: build project
