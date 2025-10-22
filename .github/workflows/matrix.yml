@@ -2,7 +2,7 @@ name: Matrix demo
 on: push
 
 jobs:
-  example_matrix:
+  build:
     strategy:
       matrix:
         node-version: [10, 12, 14]
